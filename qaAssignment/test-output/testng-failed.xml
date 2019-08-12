@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="QaAssignment-LikeMediaFile(failed)">
+    <classes>
+      <class name="net.rtcamp.qa.testCases.CreateAndEditAlbum">
+        <methods>
+          <include name="assertImageInLikes"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- net.rtcamp.qa.testCases.CreateAndEditAlbum -->
+    </classes>
+  </test> <!-- QaAssignment-LikeMediaFile(failed) -->
+</suite> <!-- Failed suite [Suite] -->

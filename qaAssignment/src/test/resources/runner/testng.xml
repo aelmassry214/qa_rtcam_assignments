@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <!-- 
+  <test thread-count="1" name="QaAssignment-Login">
+
+    <classes>
+    	<class name="net.rtcamp.qa.testCases.LoginTest">
+	      	<methods>
+	      			<include name="gotoHomePage"/>
+							<include name="loginSuccessTest" />
+							<include name="logout"/>
+  						<include name="loginFailTest" />
+	      	</methods>
+     	</class>
+     	
+    </classes>
+
+  </test> 
+  
+  
+  
+  <test thread-count="1" name="QaAssignment-updatePost">
+  
+  		<classes>
+       	<class name="net.rtcamp.qa.testCases.UpdateMediaStatusPost">
+     			<methods>
+     				<include name="gotoHomePage"/>
+     				<include name="updateMediaImagesPost"/>
+     			
+     			</methods>
+     		</class>
+     	
+			</classes>
+			
+  </test>
+  
+  -->
+  
+<!--   <test thread-count="1" name="QaAssignment-CreateAndEditAlbums">
+  
+  		<classes>    	<class name="net.rtcamp.qa.testCases.LoginTest">
+	      	<methods>
+	      			<include name="gotoHomePage"/>
+							<include name="loginSuccessTest" />
+	      	</methods>
+     	</class>
+ 		
+       	<class name="net.rtcamp.qa.testCases.CreateAndEditAlbum">
+     			<methods>
+						<include name="gotoAlbumPage"/>
+     				<exclude name="createAlbum"/>
+     				<exclude name="editAlbum"/>
+     				<exclude name="selectFiles"/>
+     				<exclude name="uploadFiles"/>
+     				<include name="likeMediaFile"/>	
+     			</methods>
+     		</class>
+     	
+			</classes>
+			
+  </test>
+ -->
+   
+  <test thread-count="1" name="QaAssignment-LikeMediaFile">
+  
+  		<classes>    	
+  		
+  		<class name="net.rtcamp.qa.testCases.LoginTest">
+	      	<methods>
+	      			<include name="gotoHomePage"/>
+							<include name="loginSuccessTest" />
+	      	</methods>
+     	</class>
+ 		
+    	<class name="net.rtcamp.qa.testCases.CreateAndEditAlbum">
+     			<methods>
+						<include name="gotoAlbumPage"/>
+      			<include name="likeMediaFile"/>	
+      			<include name="assertImageInLikes"/>
+     			</methods>
+     	</class>
+     	
+			</classes>
+			
+  </test>  
+  
+  
+</suite> <!-- Suite -->
