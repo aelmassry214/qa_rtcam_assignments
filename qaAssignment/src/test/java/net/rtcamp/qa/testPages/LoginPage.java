@@ -25,4 +25,9 @@ public class LoginPage extends TestBase {
 		loginButtonElement().click();
 	}
 
+	public void clearTextInputs() {
+		usernameElement().clear();
+		passwordElement().clear();
+	}
+
 }

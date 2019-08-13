@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>QaAssignment-LikeMediaFile</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 12 16:32:43 EET 2019</td>
+<td>Started on:</td><td>Tue Aug 13 02:24:42 EET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40238 ms)</td>
+<tr><td>Total time:</td><td>22 seconds (22038 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,8 +75,8 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='net.rtcamp.qa.testCases.CreateAndEditAlbum.assertImageInLikes()'><b>assertImageInLikes</b><br>Test class: net.rtcamp.qa.testCases.CreateAndEditAlbum</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@title=&apos;bird&apos;]&quot;}
+<td title='net.rtcamp.qa.testCases.CreateAndEditAlbum.likeMediaFile()'><b>likeMediaFile</b><br>Test class: net.rtcamp.qa.testCases.CreateAndEditAlbum</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;rtmedia-list rtmedia-list-media rtm-gallery-list clearfix context-id-3 rtm-pro-allow-action&apos;] /li[1]&quot;}
   (Session info: chrome=76.0.3809.100)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -85,8 +85,8 @@ Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &ap
 System info: host: &apos;DELL&apos;, ip: &apos;192.168.166.2&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\Amr\AppData\Local\...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.100, webStorageEnabled: true}
-Session ID: f93d5bb3674a15de5a3cd8f2442622ce
-*** Element info: {Using=xpath, value=//a[@title=&apos;bird&apos;]}
+Session ID: e2c02e0b2c45132effd1c7e6ad9a40d4
+*** Element info: {Using=xpath, value=//ul[@class=&apos;rtmedia-list rtmedia-list-media rtm-gallery-list clearfix context-id-3 rtm-pro-allow-action&apos;] /li[1]}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
@@ -99,11 +99,11 @@ Session ID: f93d5bb3674a15de5a3cd8f2442622ce
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at net.rtcamp.qa.testPages.MediaAlbumPage.targetImageInLikesElement(MediaAlbumPage.java:91)
-	at net.rtcamp.qa.testPages.MediaAlbumPage.assertImageInLikes(MediaAlbumPage.java:163)
-	at net.rtcamp.qa.testCases.CreateAndEditAlbum.assertImageInLikes(CreateAndEditAlbum.java:46)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1873091796", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1873091796'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@title=&apos;bird&apos;]&quot;}
+	at net.rtcamp.qa.testPages.MediaAlbumPage.targetMediaElement(MediaAlbumPage.java:61)
+	at net.rtcamp.qa.testPages.MediaAlbumPage.openMediaFile(MediaAlbumPage.java:131)
+	at net.rtcamp.qa.testCases.CreateAndEditAlbum.likeMediaFile(CreateAndEditAlbum.java:39)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1802066694", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1802066694'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;rtmedia-list rtmedia-list-media rtm-gallery-list clearfix context-id-3 rtm-pro-allow-action&apos;] /li[1]&quot;}
   (Session info: chrome=76.0.3809.100)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -112,8 +112,8 @@ Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &ap
 System info: host: &apos;DELL&apos;, ip: &apos;192.168.166.2&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\Amr\AppData\Local\...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.100, webStorageEnabled: true}
-Session ID: f93d5bb3674a15de5a3cd8f2442622ce
-*** Element info: {Using=xpath, value=//a[@title=&apos;bird&apos;]}
+Session ID: e2c02e0b2c45132effd1c7e6ad9a40d4
+*** Element info: {Using=xpath, value=//ul[@class=&apos;rtmedia-list rtmedia-list-media rtm-gallery-list clearfix context-id-3 rtm-pro-allow-action&apos;] /li[1]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -130,9 +130,9 @@ Session ID: f93d5bb3674a15de5a3cd8f2442622ce
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at net.rtcamp.qa.testPages.MediaAlbumPage.targetImageInLikesElement(MediaAlbumPage.java:91)
-	at net.rtcamp.qa.testPages.MediaAlbumPage.assertImageInLikes(MediaAlbumPage.java:163)
-	at net.rtcamp.qa.testCases.CreateAndEditAlbum.assertImageInLikes(CreateAndEditAlbum.java:46)
+	at net.rtcamp.qa.testPages.MediaAlbumPage.targetMediaElement(MediaAlbumPage.java:61)
+	at net.rtcamp.qa.testPages.MediaAlbumPage.openMediaFile(MediaAlbumPage.java:131)
+	at net.rtcamp.qa.testCases.CreateAndEditAlbum.likeMediaFile(CreateAndEditAlbum.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -159,8 +159,8 @@ Session ID: f93d5bb3674a15de5a3cd8f2442622ce
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>11</td>
-<td>net.rtcamp.qa.testCases.CreateAndEditAlbum@5e3a8624</td></tr>
+<td>10</td>
+<td>net.rtcamp.qa.testCases.CreateAndEditAlbum@6fd02e5</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -170,25 +170,20 @@ Session ID: f93d5bb3674a15de5a3cd8f2442622ce
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='net.rtcamp.qa.testCases.CreateAndEditAlbum.assertImageInLikes()'><b>assertImageInLikes</b><br>Test class: net.rtcamp.qa.testCases.CreateAndEditAlbum</td>
+<td></td>
+<td>6</td>
+<td>net.rtcamp.qa.testCases.CreateAndEditAlbum@6fd02e5</td></tr>
+<tr>
 <td title='net.rtcamp.qa.testCases.CreateAndEditAlbum.gotoAlbumPage()'><b>gotoAlbumPage</b><br>Test class: net.rtcamp.qa.testCases.CreateAndEditAlbum</td>
 <td></td>
-<td>2</td>
-<td>net.rtcamp.qa.testCases.CreateAndEditAlbum@5e3a8624</td></tr>
-<tr>
-<td title='net.rtcamp.qa.testCases.LoginTest.gotoHomePage()'><b>gotoHomePage</b><br>Test class: net.rtcamp.qa.testCases.LoginTest</td>
-<td></td>
-<td>15</td>
-<td>net.rtcamp.qa.testCases.LoginTest@1bce4f0a</td></tr>
-<tr>
-<td title='net.rtcamp.qa.testCases.CreateAndEditAlbum.likeMediaFile()'><b>likeMediaFile</b><br>Test class: net.rtcamp.qa.testCases.CreateAndEditAlbum</td>
-<td></td>
 <td>3</td>
-<td>net.rtcamp.qa.testCases.CreateAndEditAlbum@5e3a8624</td></tr>
+<td>net.rtcamp.qa.testCases.CreateAndEditAlbum@6fd02e5</td></tr>
 <tr>
-<td title='net.rtcamp.qa.testCases.LoginTest.loginSuccessTest()'><b>loginSuccessTest</b><br>Test class: net.rtcamp.qa.testCases.LoginTest</td>
+<td title='net.rtcamp.qa.testCases.LoginTest.logout()'><b>logout</b><br>Test class: net.rtcamp.qa.testCases.LoginTest</td>
 <td></td>
-<td>7</td>
-<td>net.rtcamp.qa.testCases.LoginTest@1bce4f0a</td></tr>
+<td>2</td>
+<td>net.rtcamp.qa.testCases.LoginTest@5bcab519</td></tr>
 </table><p>
 </body>
 </html>

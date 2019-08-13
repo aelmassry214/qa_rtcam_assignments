@@ -19,12 +19,12 @@ public class LoginTest extends TestBase {
 	// -------------- login Success ----------------
 	@Test
 	public void loginSuccessTest() {
+		driver.get(config.getProperty("url"));
 		homePage.gotoLoginPage();
 		loginPage.Login("demo", "demo");
 
 		String sucessAssert = driver.findElement(By.cssSelector(eLocators.getProperty("loginSuccess"))).getText();
 		assertTrue(sucessAssert.contains(eLocators.getProperty("successText")));
-
 	}
 
 	// -------------- login Fail -------------------
@@ -40,15 +40,34 @@ public class LoginTest extends TestBase {
 
 	}
 
-	@Test
+	// @Test
 	public void gotoHomePage() {
 		driver.get(config.getProperty("url"));
 
 	}
 
 	@Test
+	public void logoutWithoutClose() {
+		activityPage.logout();
+	}
+
+	@Test
+	public void loginSuccessTestTemp() throws InterruptedException {
+		loginPage.clearTextInputs();
+		Thread.sleep(500);
+		loginPage.Login("demo", "demo");
+
+		String sucessAssert = driver.findElement(By.cssSelector(eLocators.getProperty("loginSuccess"))).getText();
+		assertTrue(sucessAssert.contains(eLocators.getProperty("successText")));
+	}
+
+	@Test
 	public void logout() {
 		activityPage.logout();
+
+		// if (driver != null) {
+		// driver.close();
+		// }
 	}
 
 }

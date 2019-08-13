@@ -3,11 +3,6 @@ package net.rtcamp.qa.testPages;
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -116,7 +111,7 @@ public class MediaAlbumPage extends TestBase {
 
 		uploadFilesLinkElement().click();
 
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 		robotUpload(System.getProperty("user.dir") + "\\src\\test\\resources\\raw\\" + fileName);
 
@@ -132,7 +127,7 @@ public class MediaAlbumPage extends TestBase {
 	}
 
 	public void openMediaFile() {
-		targetAlbumElement().click();
+		// targetAlbumElement().click();
 		targetMediaElement().click();
 
 	}
@@ -161,33 +156,6 @@ public class MediaAlbumPage extends TestBase {
 	public void assertImageInLikes() {
 		likesElement().click();
 		assertTrue(targetImageInLikesElement().isDisplayed());
-	}
-
-	// -------------------- Utility Methods ------------------------------
-
-	public static void robotUpload(String fileName) throws AWTException {
-		StringSelection ss = new StringSelection(fileName);
-		// Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-
-		// Getting toolkit
-		Toolkit toolKit = Toolkit.getDefaultToolkit();
-
-		// Getting clipboard as file upload window
-		Clipboard clipBoard = toolKit.getSystemClipboard();
-
-		// Copying string file name to the file upload window
-		clipBoard.setContents(ss, null);
-
-		// native key strokes for CTRL, V and ENTER keys
-		Robot robot = new Robot();
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
 	}
 
 }

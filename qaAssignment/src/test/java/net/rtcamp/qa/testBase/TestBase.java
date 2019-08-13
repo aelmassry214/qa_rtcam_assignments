@@ -1,5 +1,11 @@
 package net.rtcamp.qa.testBase;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -49,13 +55,40 @@ public class TestBase {
 
 	}
 
-	// @AfterSuite
+	// @AfterTest
 	public void tearDown() {
 
 		if (driver != null) {
-			// driver.close();
+			driver.close();
 			driver.quit();
 		}
+	}
+
+	// -------------------- Utility Methods ------------------------------
+
+	public static void robotUpload(String fileName) throws AWTException {
+		StringSelection ss = new StringSelection(fileName);
+		// Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+
+		// Getting toolkit
+		Toolkit toolKit = Toolkit.getDefaultToolkit();
+
+		// Getting clipboard as file upload window
+		Clipboard clipBoard = toolKit.getSystemClipboard();
+
+		// Copying string file name to the file upload window
+		clipBoard.setContents(ss, null);
+
+		// native key strokes for CTRL, V and ENTER keys
+		Robot robot = new Robot();
+
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+
 	}
 
 }

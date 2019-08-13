@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <!-- 
+ 
+  
   <test thread-count="1" name="QaAssignment-Login">
 
     <classes>
     	<class name="net.rtcamp.qa.testCases.LoginTest">
 	      	<methods>
 	      			<include name="gotoHomePage"/>
-							<include name="loginSuccessTest" />
+	      			<include name="loginSuccessTest"/>
 							<include name="logout"/>
   						<include name="loginFailTest" />
+  						<include name="loginSuccessTestTemp"/>
 	      	</methods>
      	</class>
      	
@@ -19,71 +21,58 @@
   </test> 
   
   
-  
   <test thread-count="1" name="QaAssignment-updatePost">
   
-  		<classes>
+	    <classes>
+	     	
        	<class name="net.rtcamp.qa.testCases.UpdateMediaStatusPost">
      			<methods>
-     				<include name="gotoHomePage"/>
-     				<include name="updateMediaImagesPost"/>
-     			
+     				<include name="updateMediaImagesPost"/>	
      			</methods>
      		</class>
+     		
      	
 			</classes>
 			
   </test>
   
-  -->
+
   
-<!--   <test thread-count="1" name="QaAssignment-CreateAndEditAlbums">
+   <test thread-count="1" name="QaAssignment-CreateAndEditAlbums">
   
-  		<classes>    	<class name="net.rtcamp.qa.testCases.LoginTest">
-	      	<methods>
-	      			<include name="gotoHomePage"/>
-							<include name="loginSuccessTest" />
-	      	</methods>
-     	</class>
+  		<classes>    	
  		
        	<class name="net.rtcamp.qa.testCases.CreateAndEditAlbum">
      			<methods>
 						<include name="gotoAlbumPage"/>
-     				<exclude name="createAlbum"/>
-     				<exclude name="editAlbum"/>
-     				<exclude name="selectFiles"/>
-     				<exclude name="uploadFiles"/>
+     				<include name="createAlbum"/>
+     				<include name="editAlbum"/>
+     				<include name="selectFiles"/>
+     				<include name="uploadFiles"/>
      				<include name="likeMediaFile"/>	
+	      		<include name="assertImageInLikes"/>
      			</methods>
      		</class>
-     	
+
 			</classes>
 			
   </test>
- -->
-   
-  <test thread-count="1" name="QaAssignment-LikeMediaFile">
+
+    <test thread-count="1" name="QaAssignment-editProfile">
   
   		<classes>    	
   		
-  		<class name="net.rtcamp.qa.testCases.LoginTest">
-	      	<methods>
-	      			<include name="gotoHomePage"/>
-							<include name="loginSuccessTest" />
-	      	</methods>
-     	</class>
- 		
-    	<class name="net.rtcamp.qa.testCases.CreateAndEditAlbum">
-     			<methods>
-						<include name="gotoAlbumPage"/>
-      			<include name="likeMediaFile"/>	
-      			<include name="assertImageInLikes"/>
-     			</methods>
-     	</class>
-     	
+	    	<class name="net.rtcamp.qa.testCases.EditProfile">
+	     			<methods>
+							<include name="editProfileImage"/>
+	     			</methods>
+	     	</class>
+			
 			</classes>
 			
   </test>  
   
+
   
-</suite> <!-- Suite -->
+</suite> 
+
