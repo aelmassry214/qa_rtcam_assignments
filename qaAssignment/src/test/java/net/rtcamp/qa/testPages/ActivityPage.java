@@ -36,7 +36,7 @@ public class ActivityPage extends TestBase {
 
 	public void writeNewPostText() {
 		newPostTextAreaElement().click();
-		newPostTextAreaElement().sendKeys("Beleive in yourself.");
+		newPostTextAreaElement().sendKeys("Believe in yourself.");
 	}
 
 	public void addMedia(String fileName) {

@@ -106,7 +106,7 @@ public class MediaAlbumPage extends TestBase {
 	}
 
 	public void uploadfiles(String fileName) throws AWTException, InterruptedException {
-		wait = new WebDriverWait(driver, 15);
+		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(uploadFilesLinkElement()));
 
 		uploadFilesLinkElement().click();
@@ -118,7 +118,7 @@ public class MediaAlbumPage extends TestBase {
 	}
 
 	public void startUploadFiles() {
-		wait = new WebDriverWait(driver, 15);
+		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(startUploadButtonElement()));
 		startUploadButtonElement().click();
 		wait.until(ExpectedConditions.invisibilityOf(temporaryUploadFileListElement()));
@@ -133,7 +133,7 @@ public class MediaAlbumPage extends TestBase {
 	}
 
 	public void likeMediaFile() {
-		wait = new WebDriverWait(driver, 15);
+		wait = new WebDriverWait(driver, 30);
 		Actions action = new Actions(driver);
 		action.moveToElement(hoverToImageElement()).perform();
 

@@ -2,6 +2,7 @@ package net.rtcamp.qa.testCases;
 
 import java.awt.AWTException;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import net.rtcamp.qa.testBase.TestBase;
@@ -22,10 +23,19 @@ public class CreateAndEditAlbum extends TestBase {
 		mediaAlbumPage.editAlbum();
 	}
 
-	@Test
-	public void selectFiles() throws AWTException, InterruptedException {
-		mediaAlbumPage.uploadfiles(eLocators.getProperty("image2"));
-		// mediaAlbumPage.uploadfiles(eLocators.getProperty("image3"));
+	@DataProvider(name = "uploadImages")
+	public static Object[] image() {
+
+		return new Object[] { eLocators.getProperty("image2"), eLocators.getProperty("image3"),
+				eLocators.getProperty("image4"), eLocators.getProperty("image5"), eLocators.getProperty("image6") };
+
+	}
+
+	@Test(dataProvider = "uploadImages")
+	public void selectFiles(String image) throws AWTException, InterruptedException {
+		mediaAlbumPage.uploadfiles(image);
+		Thread.sleep(1000);
+
 	}
 
 	@Test
